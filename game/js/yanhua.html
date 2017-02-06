@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas特效</title>
+</head>
+<script>
+    window.onload=function(){
+        var can=document.querySelector('canvas');
+        var cobj=can.getContext('2d');
+        var img=document.querySelector('img');
+//        var num=-50;
+//        var num1=400;
+//        var speed1=10;
+//        var speed2=-10;
+//        setInterval(function(){
+//            cobj.clearRect(0,0,600,600);
+//            num+=speed1;
+//            num1+=speed2;
+//            if(num>=400){
+//                speed1=-10;
+//            }else if(num<=-50){
+//                speed1=10;
+//            }
+//            if(num1>=400){
+//                speed2=-10;
+//            }else if(num1<=-50){
+//                speed2=10;
+//            }
+//            cobj.save();
+//            cobj.beginPath();
+//            cobj.moveTo(0,100);
+//            cobj.bezierCurveTo(150,num1,450,num,600,100);
+//            cobj.stroke();
+//        },30);
+        cobj.drawImage(img,0,0,300,300,0,0,300,300);
+        var dataobj=cobj.getImageData(0,0,300,300);
+        blur(dataobj,10,300,0,cobj);
+//        var num=100;
+//        var dobjx=300/num;
+//        var dobjy=300/num;
+//
+//        for(var i=0;i<num;i++){
+//            for(var k=0;k<num;k++){
+//                var obj=cobj.getImageData(k*dobjx,i*dobjy,dobjx,dobjy);
+//                var r=0,g=0,b=0;
+//                for(var j=0;j<obj.width*obj.height;j++){
+//                    r+=obj.data[4*j+0];
+//                    g+=obj.data[4*j+1];
+//                    b+=obj.data[4*j+2];
+//                }
+//                r=parseInt(r/(obj.width*obj.height));
+//                g=parseInt(g/(obj.width*obj.height));
+//                b=parseInt(b/(obj.width*obj.height));
+//                for(var h=0;h<obj.width*obj.height;h++){
+//                    obj.data[4*h+0]=r;
+//                    obj.data[4*h+1]=g;
+//                    obj.data[4*h+2]=b;
+//                }
+//
+//                cobj.putImageData(obj,300+k*dobjx,i*dobjy);
+//            }
+//        }
+//        var obj=cobj.getImageData(0,0,300,300);
+//
+//        for(var i=0;i<obj.width*obj.height;i++){
+//            obj.data[4*i+0]=255-obj.data[4*i+0];
+//            obj.data[4*i+1]=255-obj.data[4*i+1];
+//            obj.data[4*i+2]=255-obj.data[4*i+2];
+//            obj.data[4*i+3]=obj.data[4*i+3];
+//        }
+//        cobj.putImageData(obj,300,0);
+
+    }
+    function pengshui(obj) {
+      this.cobj=obj;
+      this.r=Math.random()*3+3;
+      this.x=300;
+      this.y=500;
+      this.color='#F6FFA8';
+      this.zhongli=0.5;
+      this.speedx=20*Math.random()-10;
+      this.speedy=3;
+    }
+    pengshui.prototype={
+        draw:function(){
+            this.cobj.save();
+            this.cobj.beginPath();
+            this.cobj.globalCompositeOperation="lighter";
+            this.cobj.translate(this.x,this.y);
+            this.cobj.fillStyle=this.color;
+            this.cobj.arc(0,0,this.r,0,Math.PI*2,false);
+            this.cobj.fill();
+            this.cobj.restore();
+        },
+        update:function(){
+//            this.speedx+=this.zhongli;
+            this.speedy+=this.zhongli;
+            this.y-=this.speedy;
+            this.x+=10*Math.random()-5;
+            this.r-=0.15;
+        }
+    }
+/*模糊*/
+    function blur(dataobj,num,x,y,cobj){
+        var width = dataobj.width, height = dataobj.height;
+        var arr=[];
+        var num=num;
+        for(var i = 0; i < height; i++){//行
+            for(var j = 0; j < width;j++){//列
+                var x1=j+num>width?j-num:j;
+                var y1=i+num>height?i-num:i;
+                var  dataObj=cobj.getImageData(x1,y1,num,num);
+                var r=0,g=0,b=0;
+                for(var k=0;k<dataObj.width*dataObj.height;k++){
+                    r+=dataObj.data[k*4+0];
+                    g+=dataObj.data[k*4+1];
+                    b+=dataObj.data[k*4+2];
+                }
+                r=parseInt(r/(dataObj.width*dataObj.height));
+                g=parseInt(g/(dataObj.width*dataObj.height));
+                b=parseInt(b/(dataObj.width*dataObj.height));
+                arr.push(r,g,b,255);
+            }
+        }
+        for(var m = 0; m < dataobj.data.length;m++){
+            dataobj.data[m]=arr[m];
+        }
+        cobj.putImageData(dataobj,x,y)
+    }
+
+
+</script>
+<style>
+    canvas{
+        background: #ccc;
+    }
+</style>
+<body>
+<canvas width="600px" height="600px">
+
+</canvas>
+<img src="..\images\bj.jpg" alt="">
+</body>
+</html>

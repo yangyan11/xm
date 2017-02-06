@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>dazi</title>
+	<script type="text/javascript" src="js/function.js"></script>
+	<script src="js/daziyouxi.js"></script>
+	<style>
+		*{
+			font-style: "楷体";
+			font-weight: bold;
+		}
+		.scene{
+			width: 1000px;height: 100%;
+			background-color: #ffcccc;
+			position: absolute;
+			left: 50%;margin-left: -500px;top: 0;
+		}
+		.main{
+			width: 800px;height: 100%;
+			float: left;
+			border: 5px dashed yellow;
+			box-sizing:border-box;
+			position: relative;
+			overflow: hidden;
+			font-size: 50px;
+			text-align: center;padding-top: 20%;
+			background: url(daziimg/打字背景.jpg)no-repeat;
+		}
+		.control{
+			width: 200px;height: 100%;
+			background-color: #ffaaff;
+			float: right;
+			padding-top: 70px;
+			box-sizing:border-box;
+		}
+		.show{
+			width: 150px;height: 30px;
+			text-align: center;
+			line-height: 30px;
+			font-size: 18px;
+			background-color: #fff;
+			border: 3px solid #ffaaaa;
+			/*border-radius: 20px;*/
+			margin: 10px auto 30px;
+		}
+		.btn{
+			width: 150px;height: 30px;
+			text-align: center;
+			line-height: 30px;
+			font-size: 18px;
+			background-color: #ffaabb;
+			border: 2px solid #ffffaa;
+			border-radius: 20px;
+			margin: 0 auto;margin-top: 30px;
+			cursor: pointer;
+		}
+		.name{
+			width: 100%;
+			text-align: center;
+			font-size: 18px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="scene">
+		<div class="main"></div>
+		<div class="control">
+			<div class="name">得 分</div>
+			<div class="scor show">0</div>
+			<div class="name">关 卡</div>
+			<div class="state show">1</div>
+			<div class="name">生 命</div>
+			<div class="life show">3</div>
+			<div class="start btn">开始</div>
+			<div class="stop btn">暂停</div>
+			<div class="end btn">结束</div>
+		</div>
+	</div>
+</body>
+</html>

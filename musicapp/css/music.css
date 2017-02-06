@@ -1,0 +1,1466 @@
+body,html,ul,ol,li,h1,h2,h3,h4,h5,h6,input{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	color: #FFF;
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a:active{
+	color: rgba(255,255,255,.6);
+}
+p{
+	max-height:9999999px
+}
+button{
+	-webkit-appearance: none;
+}
+img{
+	border: 0;
+}
+html {
+	-ms-touch-action: none;
+}
+body{
+	background: url(../img/bg.png) 30% 20%;
+}
+/**********首页头部************/
+.index_header{
+	position: fixed;
+	top: 0;
+	display: flex;
+	width: 7.5rem;
+	height: 1rem;
+	padding: 0 0.25rem;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	color: #FFF;
+	background: rgba(0,0,0,0.9);
+}
+.header_left{
+	font-size: 0.5rem;
+	color: #FFF;
+}
+.header_title{
+	font-size: 0.36rem;
+}
+.header_search{
+	font-size: 0.5rem;
+	color: #FFF;
+}
+.index_header i{
+	font-size: 0.5rem;
+	color: #FFF;
+}
+.index_header a{
+	font-size: 0.5rem;
+	color: #FFF;
+}
+
+/*************首页底部************/
+.index_footer{
+	position: fixed;
+	bottom: 0;
+	z-index: 10;
+	display: flex;
+	width: 7.5rem;
+	height: 1.2rem;
+	padding: 0 0.25rem;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	color: #FFF;
+	background: rgba(0,0,0,0.9);
+}
+.index_footer .index_play_jihe{
+	width: 5.6rem;
+	height: 1.2rem;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	color: #FFF;
+}
+.index_play_pic{
+	width: 0.8rem;
+	height: 0.8rem;
+	-webkit-border-radius: 50%;
+	border-radius:50% ;
+	overflow: hidden;
+}
+.index_play_pic img{
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+.index_play{
+	display: flex;
+	width: 4.8rem;
+	height: 0.8rem;
+	flex-direction: column;
+	color: #FFF;
+	padding-left: 0.2rem;
+}
+.index_play_name{
+	font-size: 0.26rem;
+	padding: 0.1rem 0;
+}
+.index_play_user{
+	font-size: 0.26rem;
+	color: rgba(255,255,255,.8);
+}	
+.index_play_button{
+	width: 0.8rem;
+	height: 0.8rem;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius:50% ;
+	border: 0.05rem solid #31C27C;
+    position: relative;
+}
+.index_play_button .play_start{
+	 position: absolute;
+	 top:0.2rem;
+	 left: 0.26rem;
+	 width: 0;
+	 height: 0;
+	 border-top: 0.16rem solid transparent;
+	 border-left: 0.26rem solid #31C27C;
+	 border-bottom: 0.16rem solid transparent;
+ }
+.index_play_button .play_pause{
+	position: absolute;
+	top:0.2rem;
+	left: 0.26rem;
+	width: 0.06rem;
+	height: 0.3rem;
+	background: #31C27C;
+}
+.index_play_button .play_pause:before{
+	content: '';
+	position: absolute;
+	left: 0.15rem;
+	width: 0.06rem;
+	height: 0.3rem;
+	background: #31C27C;
+}
+/**********首页主题************/
+.index_main{
+	width: 7.5rem;
+	height: 11.14rem;
+	position: fixed;
+	top: 1rem;
+	background: rgba(0,0,0,.3);
+	overflow: hidden;
+	background: url(../img/bg.png) 30% 20%;
+}
+.index_main .swiper-slide{
+	height: auto;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*.menu_swiper {*/
+	/*width: 7.5rem;*/
+	/*height: 11.14rem;*/
+/*}*/
+/*.menu_swiper .swiper-slide {*/
+	/*height: auto;*/
+	/*-webkit-box-sizing: border-box;*/
+	/*box-sizing: border-box;*/
+/*}*/
+
+/************首页验证登录************/
+.index_user{
+	display: flex;
+	margin:0.25rem 0;
+	width: 7.5rem;
+	height: 1rem;
+	background:rgba(255,255,255,0.1);
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack:justify;
+	justify-content: space-between;
+}
+/*****未登录*****/
+.index_login{
+	display: flex;
+	margin:0.25rem 0;
+	width: 7.5rem;
+	height: 1rem;
+	background:darkred;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+}
+.index_login h3{
+	color: #FFF;
+	font-size: 0.3rem;
+	margin-left:0.25rem;
+}
+.index_login .index_login_button{
+	margin-right:0.25rem;
+	width: 1.5rem;
+	height: 0.6rem;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-border-radius: 0.1rem;
+	-moz-border-radius: 0.1rem;
+	border-radius: 0.1rem;
+	background: #31C17C;
+	color: #FFF;
+	font-size: 0.3rem;
+}
+/*****已登录*****/
+.index_user .user_pic{
+	margin-left: 0.25rem;
+	width: 0.8rem;
+	height: 0.8rem;
+	background: #000;
+	border-radius:50%;
+	overflow: hidden;
+}
+.index_user .user_pic img{
+	width: 100%;
+	height: 100%;
+}
+.index_user .user_name{
+	display: flex;
+	flex-direction: column;
+	-webkit-box-align: start;
+	align-items: flex-start;
+	width: 4.6rem;
+	font-weight: normal;
+}
+.index_user .user_name h2{
+    font-weight: normal;
+	font-size: 0.34rem;
+	margin-bottom: 0.08rem;
+	color: #FFF;
+}
+.index_user .user_name h3{
+	font-weight: normal;
+	font-size: 0.24rem;
+	color: rgba(255,255,255,0.6);
+}
+.index_user .user_state{
+	margin-right: 0.25rem;
+	font-size: 0.3rem;
+	color: rgba(255,255,255,.6);
+	font-weight: normal;
+	color: #31C17C;
+	letter-spacing: 0.02rem;
+}
+/************首页分类页***********/
+.index_list{
+	margin-bottom: 0.25rem;
+	padding-top: 0.2rem;
+	width: 7.5rem;
+	background:rgba(255,255,255,0.1);
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	justify-content: space-around;
+}
+.index_list .index_list_num{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+	width: 2rem;
+	padding-bottom: 0.2rem;
+}
+.index_list_num i{
+	display: flex;
+	width: 2rem;
+	-webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 1rem;
+	font-size: 0.8rem;
+	color: #31C17C;
+}
+.index_list_num h3{
+	display: flex;
+	-webkit-box-pack: center;
+    justify-content: center;
+	font-size: 0.34rem;
+	color: #FFF;
+	font-weight: normal;
+	padding-top:0.1rem;
+}
+.index_list_num span{
+	display: flex;
+	-webkit-box-pack: center;
+    justify-content: center;
+	padding-top:0.1rem;
+	font-size: 0.26rem;
+	color: rgba(255,255,255,.6);
+}
+/********首页歌单列表*******/
+.index_music{
+	margin-bottom: 0.25rem;
+	width: 7.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	justify-content: space-around;
+}
+/*********已登录********/
+.index_music_title{
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	justify-content: space-around;
+	-webkit-box-align:center;
+	align-items: center;
+	width: 7.5rem;
+	height: 1.2rem;
+	background: rgba(255,255,255,0.1);
+	border-bottom: 0.02rem solid rgba(255,255,255,.3);
+}
+.index_music_title h2{
+	margin-left: 0.25rem;
+	width: 6.5rem;
+	display: flex;
+	padding-left: 2.7rem;
+	-webkit-box-align:center;
+	align-items: center;
+	font-size: 0.36rem;
+	letter-spacing: 0.05rem;
+	color: #FFF;
+	font-weight: normal;
+}
+.index_music_title i,.index_musiclist i{
+	color: #FFF;
+	margin-right: 0.25rem;
+	font-size: 0.3rem;
+}
+.index_musiclist{
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	justify-content: space-around;
+	-webkit-box-align:center;
+	align-items: center;
+	width: 7.5rem;
+	padding: 0.1rem 0;
+	background: rgba(255,255,255,0.1);
+	border-bottom: 0.02rem solid rgba(255,255,255,.3);
+}
+.index_musiclist .musiclist_pic{
+	width: 1rem;
+	height: 1rem;
+	background: rgba(255,255,255,0.1);
+	margin-left: 0.25rem;
+	overflow: hidden;
+}
+.index_musiclist .musiclist_pic img{
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.index_musiclist .musiclist_info{
+	width:5.5rem;
+	padding-left: 0.2rem;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-pack: start;
+	justify-content:flex-start;
+	-webkit-box-align:start;
+	align-items: flex-start;
+}
+.musiclist_info h3{
+	width: 5rem;
+	margin-top: 0.1rem;
+	height: 0.4rem;
+	font-size: 0.3rem;
+	display: flex;
+	-webkit-box-align:center;
+	align-items: center;
+	color: #FFF;
+	letter-spacing: 0.02rem;
+}
+.musiclist_info span{
+	height: 0.4rem;
+	margin-top: 0.05rem;
+	margin-right: 0.2rem;
+	font-size: 0.28rem;
+	display: flex;
+	-webkit-box-align:center;
+	align-items: center;
+	color: rgba(255,255,255,.6);
+}
+.musiclist_info span i{
+	font-style: normal;
+	margin: 0;
+	text-decoration: none;
+	color: rgba(255,255,255,.6);
+}
+/*********未登录********/
+.musiclist_state{
+	/*display: none;*/
+}
+.musiclist_state .icon-jiahao{
+	display: flex;
+	-webkit-box-pack:center;
+	justify-content:center;
+	-webkit-box-align:center;
+	align-items: center;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	color: #31C17C;
+	font-size: 0.5rem;
+}
+.musiclist_state h3{
+	height:1rem;
+	margin: 0;
+}
+/*********************列表页********************/
+.list_head{
+	width: 7.5rem;
+	padding: 0.25rem 0.25rem;
+	display: flex;
+	-webkit-box-pack: start;
+	justify-content: flex-start;
+	-webkit-box-align: center;
+	align-items: center;
+	border-bottom: 0.02rem solid rgba(255,255,255,.3);
+}
+.list_head .index_play_button{
+	width: 0.45rem;
+	height:0.45rem;
+}
+.list_head .index_play_button .play_start{
+	border-top: 0.1rem solid transparent;
+	border-left: 0.16rem solid #30C07A;
+	border-bottom: 0.1rem solid transparent;
+	top:0.08rem;
+	left:0.12rem;
+}
+.list_head h3{
+	font-size: 0.3rem;
+	color:#FFF;
+	padding-left:0.3rem;
+}
+.list_footer{
+	width: 7.5rem;
+	padding: 0.25rem 1rem;
+	display: flex;
+	-webkit-box-pack: start;
+	justify-content: flex-start;
+	-webkit-box-align: center;
+	align-items: center;
+}
+.list_footer h3{
+	font-weight: normal;
+	font-size: 0.26rem;
+	color: rgba(255,255,255,0.3);
+}
+
+.list_scroller {
+	position: absolute;
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	width: 100%;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+/********列表搜索********/
+.list_search{
+	margin: 0.2rem 0.25rem;
+	width: 7rem;
+	height: 0.6rem;
+	display: flex;
+	-webkit-box-align: center;
+	align-items:center;
+	background: rgba(255,255,255,.1);
+	-webkit-border-radius:0.1rem;
+	-moz-border-radius:0.1rem;
+	border-radius:0.1rem;
+}
+.list_search i{
+	margin-left: 1.8rem;
+	font-size: 0.34rem;
+	color: rgba(255,255,255,0.6);
+}
+.list_search h3{
+	margin-left: 0.2rem;
+	font-size: 0.34rem;
+	color: rgba(255,255,255,0.6);
+	font-weight:normal ;
+}
+/*******列表详情********/
+.list_menu{
+	width: 7.5rem;
+	padding:0.15rem 0.25rem 0.15rem 0;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+    -webkit-box-align: center;
+	align-items: center;
+	border-bottom: 0.02rem solid rgba(255,255,255,.3);
+	background: rgba(255,255,255,.1);
+}
+.list_choose{
+	width: 0.15rem;
+	height: 0.8rem;
+	background: #35de8d;
+	margin-right: 0.15rem;
+}
+.list_num{
+	width: 7.5rem;
+	height: 0.8rem;
+}
+.list_title{
+	display: flex;
+	height: 0.4rem;
+	font-size: 0.3rem;
+	color: #FFF;
+}
+.list_userinfo{
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	height: 0.4rem;
+	font-size: 0.28rem;
+	color: rgba(255,255,255,.3);
+}
+.list_userinfo i{
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	font-size: 0.36rem;
+    color:#35de8d;
+	margin-right: 0.05rem;
+}
+.list_userinfo h3{
+	font-size: 0.26rem;
+	font-weight: normal;
+	margin-left: 0.1rem;
+}
+.list_userinfo span{
+	width: 0.1rem;
+	height:0.1rem;
+	margin-left: 0.1rem;
+	background: rgba(255,255,255,.3);
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+}
+.icon-shouyezhuyetubiao04{
+	width: 0.5rem;
+	color: #FFF;
+}
+/**************列表歌手详情*****************/
+.list_user .musiclist_pic{
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+}
+/***************搜索详情页*****************/
+.search_header{
+	position: fixed;
+	top: 0;
+	display: flex;
+	width: 7.5rem;
+	height: 1rem;
+	padding: 0 0.25rem;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	color: #FFF;
+	background: rgba(0,0,0,0.3);
+}
+.search_header .search_kuang{
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	width: 6rem;
+	height: 0.8rem;
+	background: rgba(0,0,0,0.5);
+	-webkit-border-radius: 0.1rem;
+	-moz-border-radius: 0.1rem;
+	border-radius: 0.1rem;;
+}
+.search_kuang i{
+	padding: 0 0.1rem;
+	font-size: 0.4rem;
+	color: rgba(255,255,255,0.6);
+}
+.search_kuang input{
+	display: flex;
+		-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items: center;
+    width: 5rem;
+	height: 0.8rem;
+	background: rgba(0,0,0,0);
+	outline: none;
+	border: 0;
+	line-height: 0;
+	margin: 0;
+	padding: 0.16rem 0;
+	font-size: 0.32rem;
+}
+.search_header span{
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	color: #FFF;
+	font-size: 0.32rem;
+	padding: 0 0.1rem;
+}
+.search_main,.search_footer{
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	justify-content: space-around;
+	-webkit-box-align: center;
+	align-items: center;
+	width: 7.5rem;
+	height: 0.8rem;
+	background: rgba(255,255,255,0.1);
+	border-bottom: 0.02rem solid rgba(255,255,255,.2);
+}
+.search_main i{
+	padding: 0 0.1rem;
+	font-size: 0.4rem;
+	color: rgba(255,255,255,0.6);
+}
+.search_main h3{
+	width: 5.5rem;
+	height: 0.8rem;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	color: #FFF;
+	font-size: 0.26rem;
+	font-weight:normal;
+}
+.search_footer h3{
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	color: #30C07A;
+	font-size: 0.26rem;
+	font-weight:normal;
+}
+.search_kong{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	-webkit-box-align: center;
+	align-items: center;
+}
+.search_kong i{
+	font-size:3rem;
+	margin-top: 1rem;
+	margin-left: 0.5rem;
+	color: #FFF;
+	line-height: 3rem;
+}
+.search_kong h3{
+	font-size: 0.3rem;
+	color: #FFF;
+
+}
+/****************MV播放界面****************/
+.video{
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	justify-content: space-around;
+	-webkit-box-align: center;
+	align-items: center;
+	width: 7.5rem;
+	background: rgba(255,255,255,0.1);
+}
+.video video{
+	display: flex;
+	width: 7.5rem;
+	height: 4.57rem;
+	background: url("../img/showprc.png");
+	background-size: cover;
+}
+.video .video_info{
+	display: flex;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: start;
+	align-items: flex-start;
+	width:7.5rem;
+	height: 1rem;
+}
+.video_info h3{
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	margin-left: 0.25rem;
+	height: 0.4rem;
+	font-size: 0.34rem;
+	font-weight:normal;
+	color: #FFF;
+}
+.video_info .video_user span{
+	margin-left: 0.4rem;
+	font-size: 0.26rem;
+	font-weight: normal;
+	color: rgba(255,255,255,.6);
+}
+.video_info .vedio_num{
+	font-size: 0.28rem;
+	color: rgba(255,255,255,.6);
+}
+.video_info .vedio_num span{
+	margin-right: 0.1rem;
+}
+/****************************登陆界面*************************/
+.login{
+	display: flex;
+	width: 7.5rem;
+	height: 13.34rem;
+	flex-direction: column;
+	flex-wrap: wrap;
+	position: relative;
+}
+.login .close{
+	position: absolute;
+	top:0.3rem;
+	right: 0.3rem;
+	font-size: 0.5rem;
+	color: #DFDFDF;
+}
+.login_icon{
+	padding-top:1.6rem;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content:center;
+}
+.login_icon i{
+	font-size: 2rem;
+	color: rgba(0,0,0,.6);
+}
+.login_main{
+	display: flex;
+	flex-direction: column;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content:center;
+	flex-wrap: wrap;
+	padding:0.25rem 0;
+}
+.login_main .login_user,.login_main .login_pass,.login_main .login_sub,.login_main .login_zhuce{
+	width: 6rem;
+	height: 0.8rem;
+	-webkit-border-radius: 0.8rem;
+	-moz-border-radius: 0.8rem;
+	border-radius: 0.8rem;
+	border: 0.01rem solid #A0A0A4;
+	background: rgba(0,0,0,.6);
+	font-size: 0.32rem;
+	font-weight: bold;
+	text-indent: 0.5rem;
+	letter-spacing: 0.05rem;
+	outline: none;
+	color: #FFF;
+}
+.login_main .login_sub,.login_main .login_zhuce{
+	justify-content: center;
+	border: 0.01rem solid #229e1f;
+	background: #229e1f;
+	color: #FFF;
+	text-indent: 0;
+}
+.login_reg .login_sub,.login_reg .login_zhuce{
+	width: 2.85rem;
+	height: 0.8rem;
+	justify-content: center;
+	border: 0.01rem solid #229e1f;
+	background: #229e1f;
+	color: #FFF;
+	text-indent: 0;
+}
+.login_main .error{
+	font-size: 0.3rem;
+	color: #D01405;
+	padding: 0.1rem 0.5rem;
+}
+.login_bottom{
+	display: flex;
+	flex-direction: column;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content:center;
+	padding:0.25rem 0;
+	font-size: 0.3rem;
+	color: #7d7d7d;
+}
+.login_bottom h2{
+	padding:0.08rem 0;
+	color: #b4efb4;
+	font-size: 0.36rem;
+	letter-spacing: 0.06rem;
+}
+.login_footer{
+	display: flex;
+	flex-direction: column;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content:center;
+	padding:0.25rem 0;
+	font-size: 0.3rem;
+	color: #7d7d7d;
+}
+.login_footer h2{
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items: center;
+	width: 7rem;
+	margin:0.1rem 0.25rem;
+	color: #fff;
+	font-size: 0.3rem;
+	letter-spacing: 0.06rem;
+}
+.login_footer h2 span{
+	display: flex;
+	width: 0.5rem;
+	height:0.03rem;
+	margin: 0 0.1rem;
+	background: rgba(255,255,255,.6);
+}
+.login_footer .login_other{
+	width: 6rem;
+	margin: 0.15rem 0.75rem;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-around;
+	-webkit-box-align: center;
+	align-items: center;
+}
+.login_other .login_qq,.login_other .login_weixin,.login_other .login_weibo{
+    width: 0.8rem;
+	height: 0.8rem;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background: rgba(0,0,0,.9);
+}
+
+/*************************播放界面***************************/
+.play_header{
+	background: rgba(0,0,0,0);
+	z-index: 10;
+}
+.play_bg{
+	position: fixed;
+	top:0;
+	width: 7.5rem;
+	height: 13.34rem;
+	z-index: 1;
+	background: url("../img/showprc.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	-webkit-filter: blur(0.07rem);
+	-moz-filter: blur(0.07rem);
+	-o-filter: blur(0.07rem);
+	-ms-filter: blur(0.07rem);
+}
+.play{
+	position: fixed;
+	top:0;
+	width: 7.5rem;
+	height: 13.34rem;
+	z-index: 5;
+	background: rgba(0,0,0,.7);
+}
+/**********************播放界面主体************************/
+.play_main {
+	position: fixed;
+	top:1rem;
+	width: 7.5rem;
+	height: 8.94rem;
+	z-index: 5;
+}
+.play_main  .swiper-slide {
+	width: 7.5rem;
+	height: 8.94rem;
+	color:#fff;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.play_main .swiper-pagination{
+	position: absolute;
+	bottom: 0.08rem;
+	left: 0;
+	width: 7.5rem;
+}
+.play_main .swiper-pagination span{
+	margin: 0 0.5rem;
+	width: 0.14rem;
+	height: 0.14rem;
+}
+/********播放左界面********/
+.music_info{
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	justify-content: space-around;
+	-webkit-box-align:center;
+	align-items: center;
+	width: 7.5rem;
+	height: 1rem;
+	border-bottom: 0.02rem solid rgba(255,255,255,.3);
+}
+.music_info h3{
+	margin-left: 0.15rem;
+	width: 5.6rem;
+	display: flex;
+	-webkit-box-align:center;
+	align-items: center;
+	font-size: 0.3rem;
+	letter-spacing: 0.05rem;
+	color: #FFF;
+	/*font-weight: normal;*/
+}
+.music_info h3 span{
+	margin: 0 0.1rem;
+}
+.music_info i{
+	width: 0.5rem;
+	color: #FFF;
+	font-size: 0.3rem;
+}
+.music_info .music_pic{
+	width: 0.7rem;
+	height: 0.7rem;
+	background: rgba(255,255,255,0.1);
+	margin-left: 0.25rem;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	overflow: hidden;
+}
+.music_info .music_pic img{
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/*************播放页面中间***************/
+.play_show{
+	display: flex;
+	flex-direction: column;
+	-webkit-box-align: center;
+	align-items: center;
+}
+.play_info{
+	width: 7.5rem;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.play_info h3,.play_info h4{
+	display: flex;
+	-webkit-box-pack:center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items: center;
+	font-size: 0.42rem;
+	color: #FFF;
+	padding-bottom: 0.3rem;
+	letter-spacing: 0.06rem;
+}
+.play_info h4{
+	font-size: 0.34rem;
+}
+.play_info h4 span{
+	margin: 0 0.1rem;
+	display: flex;
+	width: 0.3rem;
+	height: 0.03rem;
+	background: rgba(255,255,255,.6);
+}
+.play_pan{
+    width: 6.2rem;
+	height: 6.2rem;
+	margin-top: 0.4rem;
+	background: rgba(0,0,0,.2);
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	display: flex;
+	-webkit-box-pack:center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items: center;
+}
+.play_cover{
+	width: 5.8rem;
+	height: 5.8rem;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	overflow: hidden;
+}
+.play_cover img{
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/**********************播放界面底部************************/
+.play_footer{
+	position: fixed;
+	bottom:0;
+	width: 7.5rem;
+	height: 3rem;
+	z-index: 6;
+}
+/******进度条*******/
+.play_process{
+	width: 7.5rem;
+	height: 0.6rem;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+}
+.play_process span{
+	width: 0.7rem;
+	font-size: 0.28rem;
+	color: rgba(255,255,255,.6);
+	margin: 0 0.15rem;
+}
+.play_process .play_jindu{
+	position: relative;
+	width: 5.5rem;
+	height: 0.6rem;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+}
+.play_jindu .playline_con{
+	position: absolute;
+	top: 0;bottom: 0;left: 0;right: 0;
+	margin: auto;
+	width: 5.5rem;
+	height: 0.05rem;
+	background: rgba(255,255,255,.6);
+	z-index: 7;
+}
+.play_jindu .playline{
+	position: absolute;
+	top: 0;bottom: 0;left: 0;
+	margin: auto 0;
+	width: 5rem;
+	height: 0.05rem;
+	background: #31C27C;
+	z-index: 7;
+}
+.play_jindu .playline .playline_ball{
+	position: absolute;
+	top: 0;bottom: 0;right: -0.1rem;
+	margin: auto 0;
+	width: 0.3rem;
+	height: 0.3rem;
+	background:#31C27C;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+}
+/******按钮*******/
+.play_btn{
+	width: 7.5rem;
+	height: 1.6rem;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items: center;
+}
+.play_btn i{
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items: center;
+	width: 0.8rem;
+	height: 0.8rem;
+	font-size: 0.8rem;
+	color: #31C27C;
+    margin: 0 0.8rem;
+}
+.play_change{
+	width: 1.2rem;
+	height: 1.2rem;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius:50% ;
+	border: 0.05rem solid #31C27C;
+	position: relative;
+}
+.play_change .play_start{
+	position: absolute;
+	top:0.3rem;
+	left: 0.38rem;
+	width: 0;
+	height: 0;
+	border-top: 0.26rem solid transparent;
+	border-left: 0.46rem solid #31C27C;
+	border-bottom: 0.26rem solid transparent;
+}
+.play_change .play_pause{
+	position: absolute;
+	top:0.3rem;
+	left: 0.4rem;
+	width: 0.08rem;
+	height: 0.5rem;
+	background: #31C27C;
+}
+.play_change .play_pause:before{
+	content: '';
+	position: absolute;
+	left: 0.2rem;
+	width: 0.08rem;
+	height: 0.5rem;
+	background: #31C27C;
+}
+/******icon*******/
+.play_icon{
+	width: 7.5rem;
+	height: 0.8rem;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-around;
+	-webkit-box-align: start;
+	align-items: flex-start;
+}
+.play_icon i{
+	display: flex;
+	margin-top: 0.1rem;
+	width: 0.5rem;
+	height:0.5rem;
+	font-size: 0.5rem;
+	color: rgba(255,255,255,0.6);
+}
+.play_icon .play_like{
+	color: #FD7072;
+}
+.play_icon .play_danqu{
+	color: #31C27C;
+}
+/************************专辑、歌手详情页*************************/
+.albumshow_header{
+	position: fixed;
+	top: 0;
+	display: flex;
+	width: 7.5rem;
+	height: 1rem;
+	padding: 0 0.25rem;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	color: #FFF;
+	z-index: 10;
+}
+.albumshow_header i{
+	font-size: 0.5rem;
+	color: #FFF;
+}
+/**********专辑背景统一**********/
+.album_bg{
+	position: fixed;
+	top:0;
+	z-index: 5;
+	width: 7.5rem;
+	height: 5.5rem;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: end;
+	align-items: flex-end;
+	overflow: hidden;
+}
+.album_bg .album_bg_bg{
+    position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background: rgba(0,0,0,.4);
+}
+.album_bg img{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background-size: cover;
+	background-repeat:no-repeat;
+}
+
+.album_bg h3{
+	width: 7.5rem;
+	margin-bottom: 0.5rem;
+    font-size: 0.4rem;
+	color: #FFF;
+	letter-spacing: 0.04rem;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items:  center;
+	z-index:6;
+}
+.album_bg h3 span{
+	display: flex;
+	width: 0.6rem;
+	height: 0.02rem;
+	background:#fff;
+	margin:0 0.1rem;
+}
+/**********专辑详情列表统一**********/
+.albumshow_con{
+	position: fixed;
+	top: 5.5rem;
+	z-index: 6;
+	width: 7.5rem;
+	height: 7.84rem;
+    background-color: rgba(0,0,0,.5);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.albumcon_list{
+    display: flex;
+	width: 7.5rem;
+	height: 0.8rem;
+	-webkit-box-pack:justify;
+	justify-content: space-around;
+	border-bottom: 0.02rem solid rgba(255,255,255,.1);
+}
+.albumcon_list h3{
+	display: flex;
+	font-size: 0.38rem;
+	color: rgba(255,255,255,.8);
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items:  center;
+	letter-spacing: 0.04rem;
+}
+.albumcon_list span{
+	margin-left:0.1rem;
+}
+/**********专辑详情主题统一**********/
+.albumcon_show {
+	width: 7.5rem;
+	height: 5.8rem;
+	overflow: hidden;
+	position: relative;
+}
+.albumcon_show .swiper-slide{
+	height: auto;
+}
+.albumcon_show .showalbum_slide{
+	width: 6.8rem;
+	margin: 0 0.35rem;
+}
+/**********歌手详情***********/
+.singer_info{
+	width:7rem;
+	margin: 0.25rem;
+	font-size: 0.26rem;
+	color: rgba(255,255,255,.6);
+}
+.singer_pic{
+	width:7rem;
+	margin:0.5rem 0.25rem;
+	display: flex;
+    flex-wrap: wrap;
+	-webkit-box-pack:justify;
+	justify-content: space-around;
+}
+.singer_pic .spic_title{
+	display: flex;
+	width:7.5rem;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align:center;
+	font-size: 0.38rem;
+	color: rgba(255,255,255,.8);
+	letter-spacing: 0.04rem;
+	margin-bottom: 0.1rem;
+}
+.singer_pic img{
+    width: 3.2rem;
+	height: 3rem;
+	margin: 0.1rem 0.05rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+/*************专辑详情*************/
+.showalbum_info{
+	width: 6.8rem;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	border-bottom: 0.01rem solid rgba(255,255,255,.3);
+}
+.showalbum_info h3{
+	width: 2rem;
+	height: 0.4rem;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack:start ;
+	justify-content: flex-start;
+	font-size: 0.28rem;
+	color: #FFF;
+	letter-spacing: 0.02rem;
+	font-weight:normal;
+	margin: 0.2rem 0;
+}
+.showalbum_info span{
+	width: 4.8rem;
+	height: 0.4rem;
+	font-size: 0.28rem;
+	color: rgba(255,255,255,.6);
+	font-weight:normal;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	margin: 0.2rem 0;
+	overflow: hidden;
+}
+.showalbum_infomation{
+	width: 6.8rem;
+	margin: 0.2rem 0;
+}
+.showalbum_infomation p{
+	width: 6.8rem;
+	font-size: 0.28rem;
+	color: rgba(255,255,255,.6);
+}
+/************************歌单*****************************/
+/***********歌单详情页*************/
+.albumcon_show .showsonglist_slide{
+	width: 7.5rem;
+}
+/***********歌单列表页***************/
+.songlist_menu{
+	width: 7.5rem;
+	padding: 0.25rem 0.25rem;
+	display: flex;
+	-webkit-box-pack: start;
+	justify-content: flex-start;
+	-webkit-box-align: center;
+	align-items: center;
+	border-bottom: 0.02rem solid rgba(255,255,255,.3);
+}
+.songlist_menu h3{
+	display: flex;
+	font-size: 0.3rem;
+	color:#FFF;
+	width: 4.6rem;
+}
+.songlist_add,.songlist_manage{
+	font-size: 0.3rem;
+	color:#FFF;
+	display: flex;
+	width: 1.2rem;
+	font-weight:bold;
+}
+.songlist_add{
+	margin-right: 0.1rem;
+}
+.songlist_add i,.songlist_manage i{
+	color: #31C27C;
+	margin-right: 0.06rem;
+	font-size: 0.36rem;
+}
+.songlist_header i{
+	font-size: 0.36rem;
+}
+.gedan_add{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.2);
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+}
+.gedan_add input{
+    width: 7rem;
+	background: rgba(0,0,0,.6);
+	color:#FFF;
+	border-radius: 0.2rem;
+	margin: 0.1rem 0;
+}
+/******************************个人账户******************************/
+.person_denglu{
+	width:7.5rem;
+	display: flex;
+	flex-direction: column;
+	-webkit-box-align: center;
+	align-items: center;
+	padding: 0.5rem 0;
+}
+.person_denglu h2{
+	font-size:0.34rem;
+	color: #FFF;
+	margin-bottom: 0.2rem;
+}
+.person_denglu .person_start{
+   display: flex;
+	width: 2.85rem;
+	height: 0.6rem;
+	-webkit-border-radius: 0.8rem;
+	-moz-border-radius: 0.8rem;
+	border-radius: 0.8rem;
+	font-size: 0.32rem;
+	font-weight: bold;
+	letter-spacing: 0.05rem;
+	color: #FFF;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items: center;
+	border: 0.01rem solid #229e1f;
+	background: #229e1f;
+}

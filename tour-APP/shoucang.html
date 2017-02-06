@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="x5-orientation" content="portrait | landscape" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="screen-orientation" content="portrait">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.jquery.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/index.js"></script>
+    <title>旅游APP</title>
+</head>
+<body>
+<div class="shoucang">
+    <div class="head">
+        <div class="back"><a href="shouye.html"></a></div>
+        <h3>
+            <b class="active">景点收藏</b>
+            <b>帖子收藏</b>
+        </h3>
+        <div class="menu"></div>
+    </div>
+    <div class="jingdianlist">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <h3>没有更多了</h3>
+    </div>
+    <div class="tiezilist">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <h3>没有更多了</h3>
+    </div>
+
+</div>
+</body>
+<script>
+    $(".shoucang .head h3 b").on("click",function () {
+        $(".shoucang .head h3 b").removeClass("active");
+        $(this).addClass("active");
+    });
+    $(".shoucang .head h3 b:nth-child(1)").on("click",function () {
+        $(".shoucang .jingdianlist").fadeIn();
+        $(".shoucang .tiezilist").fadeOut();
+    });
+    $(".shoucang .head h3 b:nth-child(2)").on("click",function () {
+        $(".shoucang .jingdianlist").fadeOut();
+        $(".shoucang .tiezilist").fadeIn();
+    });
+</script>
+</html>

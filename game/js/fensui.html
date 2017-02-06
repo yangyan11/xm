@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>粉碎</title>
+</head>
+<style>
+    canvas{
+        background:#ccc;
+
+    }
+</style>
+<script>
+    window.onload=function () {
+        var can=document.querySelector('canvas');
+        var cobj=can.getContext('2d');
+        var but=document.querySelector('.but');
+
+        cobj.beginPath();
+//        cobj.fillStyle='blue';
+//        cobj.fillRect(0,0,200,200);
+//        var obj=cobj.getImageData(0,0,300,300);
+////        for(var i=0;i<obj.width*obj.height;i++){
+////            obj.data[4*i+0];
+////            obj.data[4*i+1];
+////            obj.data[4*i+2];
+////        }
+        cobj.font='100px blod 苹方';
+        cobj.fillText('王涛',0,100);
+        var arr=[];
+        for(var i=0;i<38;i++){
+            for(var k=0;k<38;k++){
+              var obj=cobj.getImageData(k*8,i*8,8,8);
+                var r=0,g=0,b=0,a=0;
+                for(var j=0;j<obj.width*obj.height;j++){
+                   r+=obj.data[j*4+0];
+                   g+=obj.data[j*4+1];
+                    b+=obj.data[j*4+2];
+                    a+=obj.data[j*4+3];
+               }
+               if(r+g+b+a==0){
+                   console.log('空');
+               }else{
+                   var arcobj=new arco(cobj,k*8+4,i*8+4,6);
+                   arr.push(arcobj);
+//                   cobj.beginPath();
+//                   cobj.fillStyle='yellow';
+//                   cobj.arc(k*3+1,i*3+1,1,0,2*Math.PI,false);
+//                   cobj.fill();
+               }
+            }
+        }
+//        console.dir(arr);
+        cobj.clearRect(0,0,600,600);
+        for(var n=0;n<arr.length;n++){
+            arr[n].draw();
+        }
+       var aa=0;
+        but.onclick=function(){
+            var t=setInterval(function(){
+                aa++;
+             if(aa==30){
+                 clearInterval(t);
+             }
+                cobj.clearRect(0,0,600,600);
+                for(var i=0;i<arr.length;i++){
+                    arr[i].draw();
+                    arr[i].update();
+                }
+            },30)
+        }
+
+    }
+    function arco(cobj,x,y,r){
+        this.cobj=cobj;
+        this.x=x;
+        this.y=y;
+        this.r=r;
+        this.rs=0.1;
+        this.color='rgb('+parseInt(Math.random()*255)+','+parseInt(Math.random()*255)+','+parseInt(Math.random()*255)+')';
+        this.sx=Math.random()*10-5;
+        this.sy=Math.random()*10-5;
+    }
+    arco.prototype={
+        draw:function(){
+            this.cobj.beginPath();
+            this.cobj.fillStyle=this.color;
+            this.cobj.arc(this.x,this.y,this.r,0,Math.PI*2,false);
+            this.cobj.fill();
+        },
+        update:function(){
+            this.x+=this.sx;
+            this.y+=this.sy;
+
+        }
+    }
+</script>
+<body>
+  <canvas width="600px" height="600px">
+
+  </canvas>
+<button class="but">打散</button>
+</body>
+</html>

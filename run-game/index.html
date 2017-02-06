@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超级跑酷</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/hitPix.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/run.js"></script>
+    <link rel="icon" href="imgs/favicon.png">
+    <link rel="stylesheet" href="css/run.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+<audio src="audio/1702.wav" class="runA" loop></audio>
+<audio src="audio/5181.wav" class="jumpA"></audio>
+<audio src="audio/6046.wav" class="hitA"></audio>
+<audio src="audio/5540.wav" class="zidanA"></audio>
+<audio src="audio/die.wav" class="dieA"></audio>
+
+<canvas></canvas>
+
+<div class="start  text-center">
+  <div class="welcome">
+      超级跑酷
+  </div>
+  <button type="button" class="btn btn-success ksyx">开始游戏</button>
+</div>
+
+<div class="over text-center">
+    <div class="game">Game Over!</div>
+    当前分数：<span class="scoreEle">0</span><br>
+    历史记录：
+    <ul class="text-center">
+
+    </ul>
+    <button type="button" class="btn btn-success again">再来一次</button>
+</div>
+<div class="mask"></div>
+
+<div class="score">
+    <div class="life">
+        <span>生命力：</span>
+        <div class="smz">
+            <div class="progress">
+                <span class="progress1"></span>
+            </div>
+        </div>
+    </div>
+    <div class="jf">
+        <span>战斗力：</span>
+        <span class="jifen">0</span>
+    </div>
+</div>
+
+
+   <img src="imgs/person/run1.png" alt="" class="run" hidden>
+   <img src="imgs/person/run2.png" alt="" class="run" hidden>
+   <img src="imgs/person/run3.png" alt="" class="run" hidden>
+   <img src="imgs/person/run4.png" alt="" class="run" hidden>
+   <img src="imgs/person/run5.png" alt="" class="run" hidden>
+   <img src="imgs/person/run6.png" alt="" class="run" hidden>
+   <img src="imgs/person/run7.png" alt="" class="run" hidden>
+   <img src="imgs/person/run8.png" alt="" class="run" hidden>
+
+   <img src="imgs/person/jump.png" alt="" class="jump" hidden>
+
+   <img src="imgs/zidan.png" alt="" class="zidan" hidden>
+
+   <img src="imgs/hinder/boom.png" alt="" class="hinder" hidden>
+   <img src="imgs/hinder/chick.png" alt="" class="hinder" hidden>
+   <img src="imgs/hinder/egg.png" alt="" class="hinder" hidden>
+   <img src="imgs/hinder/flow.png" alt="" class="hinder" hidden>
+   <img src="imgs/hinder/grass.png" alt="" class="hinder" hidden>
+   <img src="imgs/hinder/stone.png" alt="" class="hinder" hidden>
+   <img src="imgs/hinder/tree.png" alt="" class="hinder" hidden>
+   <img src="imgs/hinder/ys.png" alt="" class="hinder" hidden>
+
+</body>
+</html>

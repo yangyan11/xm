@@ -1,0 +1,203 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+ul li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+canvas{
+    background:#000  url(../imgs/back/back.jpg) repeat-x ;
+}
+img{
+    width:220px;
+    position: absolute;
+    left:100px;
+    top:100px;
+}
+img:not(:first-of-type){
+    display: none;
+}
+.start{
+    width:30%;
+    height:40%;
+    position: fixed;
+    left:0;top:0;right:0;bottom: 0;
+    margin:auto;
+    border:3px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    z-index:1;
+    animation: start 2s ease forwards;
+}
+.mask{
+    width:100%;height:100%;
+    position: fixed;
+    left:0;top:0;
+    background: rgba(0,0,0,.5);
+    animation: mask 2s ease forwards;
+}
+.welcome{
+    line-height: 150px;
+    font-size:30px;
+    color:#fff;
+
+}
+
+@keyframes  start{
+    0%{
+        transform: translate(0,-1000px);
+    }
+    100%{
+        transform: translate(0,0px);
+    }
+}
+@keyframes  start1{
+    0%{
+        transform: translate(0,0px);
+    }
+    100%{
+        transform: translate(0,-1000px);
+    }
+}
+@keyframes  mask{
+    0%{
+        background: rgba(0,0,0,0.2);
+    }
+    100%{
+        background: rgba(0,0,0,0.6);
+    }
+}
+@keyframes  mask1{
+    0%{
+        background: rgba(0,0,0,0.6);
+    }
+    100%{
+        background: rgba(0,0,0,0);
+    }
+}
+
+.over{
+    width: 30%;
+    height: 39%;
+    border: 3px solid pink;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px rgba(255,255,255,0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    animation: start1 2s ease forwards;
+}
+.game{
+    line-height: 80px;
+    color: #fff;
+    font-size: 25px;
+}
+.score{
+    width: 300px;
+    height: 100px;
+    padding: 0 20px;
+    position: absolute;
+    top:20px;
+    right: 20px;
+}
+.life{
+    width: 100%;
+    height: 50px;
+}
+.life span{
+    height: 50px;
+    line-height: 50px;
+    font-weight: bolder;
+    color:red;
+    float: left;
+    text-shadow: 2px 2px 5px yellow;
+}
+.smz{
+    width: 182px;
+    height: 50px;
+    float: left;
+}
+
+.progress{
+    padding: 4px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    width: 100%;
+    height:20px;
+    margin: 15px;
+}
+.life .progress1{
+    background-color: #86e01e;
+    position: relative;
+    height: 13px;
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    -webkit-transition: 0.4s linear;
+    -moz-transition: 0.4s linear;
+    -o-transition: 0.4s linear;
+    transition: 0.4s linear;
+    -webkit-transition-property: width, background-color;
+    -moz-transition-property: width, background-color;
+    -o-transition-property: width, background-color;
+    transition-property: width, background-color;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+}
+.progress1:before, .progress1:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.progress1:before {
+    bottom: 0;
+    background: url("../imgs/stripes.png") 0 0 repeat;
+    border-radius: 4px 4px 0 0;
+}
+.progress1:after {
+    z-index: 2;
+    bottom: 45%;
+    border-radius: 4px;
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+}
+.jf{
+    width: 100%;
+    height: 50px;
+}
+.jf span{
+    width: 50px;
+    height: 50px;
+    line-height:50px;
+    font-weight:700;
+    color:red;
+    text-shadow: 2px 2px 5px yellow;
+}
+.jf .jifen{
+    line-height:50px;
+    margin-left: 30px;
+    text-shadow:none;
+    font-size: 24px;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px yellow;
+}
